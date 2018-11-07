@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from './logo.svg';
+import Capture from './assests/Capture.PNG';
 import './App.css';
 import { simpleAction } from './actions/simpleAction'
 
@@ -22,7 +22,7 @@ class App extends Component {
   return (
    <div className="App">
     <header className="App-header">
-     <img src={logo} className="App-logo" alt="logo" />
+     <img src={Capture} className="App-logo" alt="logo" />
      <h1 className="App-title">Allen Arts Music</h1>
     </header>
     <pre>
