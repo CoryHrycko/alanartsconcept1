@@ -1,4 +1,3 @@
-// src/js/components/Form.js
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuidv1 from "uuid";
