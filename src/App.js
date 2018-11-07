@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Capture from './assests/Capture.PNG';
-import './App.css';
 import { simpleAction } from './actions/simpleAction'
 
 
