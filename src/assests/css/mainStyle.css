@@ -21,7 +21,7 @@ code {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,32 +37,20 @@ code {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #f0f0f0;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #2a2522;
 }
 
-@-webkit-keyframes App-logo-spin {
+/*@keyframes App-logo-spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
+*/
 /*# sourceMappingURL=mainStyle.css.map */
