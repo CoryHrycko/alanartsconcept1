@@ -20,7 +20,8 @@ class App extends Component {
  render() {
   return (
    <div className="App">
-    <header className="App-header">
+    <header className="heropanel--video" data-vide-bg="mp4: ../assests/css/ThePiano.mp4"
+    datavi>
      <img src={Capture} className="App-logo" alt="logo" />
      <h1 className="App-title">Allen Arts Music</h1>
      </header>
