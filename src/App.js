@@ -23,10 +23,12 @@ class App extends Component {
     <header className="App-header">
      <img src={Capture} className="App-logo" alt="logo" />
      <h1 className="App-title">Allen Arts Music</h1>
-     <h3 className="mainShape"> In the back is either going to be a. a series of videos or slide show</h3>
-    </header>
-    <container className="mainShape">
-    <pre>
+     </header>
+     <container className="mainShape">
+   
+     <h3 className="mainShapeTitle"> In the back is either going to be a. a series of videos or slide show</h3>
+    
+     <pre>
  {
   JSON.stringify(this.props)
  }

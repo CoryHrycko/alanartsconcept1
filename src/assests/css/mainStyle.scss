@@ -1,4 +1,7 @@
 //---------------reset-------------------------
+HTML{
+  --p:1.3em;
+}
 body {
     margin: 0;
     padding: 0;
@@ -41,8 +44,12 @@ $Csucess:hsl(104, 73%, 29%);
   text-align: center;
 }
 .mainShape{
+  position: relative;
   height: 100vh;
   max-width: 1200px;
+  justify-content: center;
+  padding: var(--p);
+  background: $Calert;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -50,7 +57,7 @@ $Csucess:hsl(104, 73%, 29%);
 }
 
 .App-header {
-  background-color: $black;
+  background-color: $Ccaution;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,7 +66,11 @@ $Csucess:hsl(104, 73%, 29%);
   font-size: calc(10px + 2vmin);
   color: $P1color;
 }
-
+.App-title{
+ background: $Calert;
+ padding: var(--p);
+ 
+}
 .App-link {
   color: $ivoryblack;
 }

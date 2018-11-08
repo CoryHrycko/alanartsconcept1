@@ -1,3 +1,7 @@
+HTML {
+  --p:1.3em;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +18,17 @@ code {
   text-align: center;
 }
 
+.mainShape {
+  position: relative;
+  height: 100vh;
+  max-width: 1200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: var(--p);
+  background: #e32636;
+}
+
 .App-logo {
   -webkit-animation: App-logo-spin infinite 20s linear;
           animation: App-logo-spin infinite 20s linear;
@@ -21,7 +36,7 @@ code {
 }
 
 .App-header {
-  background-color: black;
+  background-color: #00009e;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -38,6 +53,11 @@ code {
           justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #f0f0f0;
+}
+
+.App-title {
+  background: #e32636;
+  padding: var(--p);
 }
 
 .App-link {
