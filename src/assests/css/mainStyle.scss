@@ -1,3 +1,4 @@
+//---------------reset-------------------------
 body {
     margin: 0;
     padding: 0;
@@ -40,7 +41,8 @@ $Csucess:hsl(104, 73%, 29%);
   text-align: center;
 }
 .mainShape{
-  
+  height: 100vh;
+  max-width: 1200px;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
