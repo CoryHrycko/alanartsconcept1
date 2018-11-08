@@ -27,18 +27,8 @@ class App extends Component {
      <container className="mainShape">
    
      <h3 className="mainShapeTitle"> In the back is either going to be a. a series of videos or slide show</h3>
-    
-     <pre>
- {
-  JSON.stringify(this.props)
- }
-</pre>
 
-
-    <button onClick={this.simpleAction}>Test redux action</button>    <p className="App-intro">
-     To get started, edit <code>src/App.js</code> and save to reload
-    </p>
-    </container>
+     </container>
    </div>
    
     

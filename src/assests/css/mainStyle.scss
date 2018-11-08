@@ -44,12 +44,17 @@ $Csucess:hsl(104, 73%, 29%);
   text-align: center;
 }
 .mainShape{
-  position: relative;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  width: 100px;
+  width: 1000px;
+  background-color: #ccc;
+  border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
-  justify-content: center;
-  padding: var(--p);
-  background: $Calert;
+
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

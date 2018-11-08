@@ -19,14 +19,16 @@ code {
 }
 
 .mainShape {
-  position: relative;
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  width: 100px;
+  width: 1000px;
+  background-color: #ccc;
+  border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: var(--p);
-  background: #e32636;
 }
 
 .App-logo {
