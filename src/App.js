@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Capture from './assests/Capture.JPG';
 import { simpleAction } from './actions/simpleAction'
-
+import Video from './components/bgVideo.js'
 
 const mapStateToProps = state => ({
   ...state
@@ -22,7 +22,7 @@ class App extends Component {
    <div className="App">
     <header className="heropanel">
       <div className="v-header container">
-        <video src="../assests/css/ThePiano.mov" autoPlay={true} loop={true}></video>
+        <Video />
           <img src={Capture} className="App-logo" alt="logo" />
           <h1 className="App-title">Allen Arts Music</h1>
       </div>
