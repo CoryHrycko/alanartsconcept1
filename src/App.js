@@ -51,13 +51,12 @@ backdropClickHandler=()=>{
       <div className="v-header container">
           <img src={Capture} className="App-logo" alt="logo" />
           <h1 className="App-title">Allen Arts Music</h1>
-      
-
+        <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
+        <SideDrawer show={this.state.sideDrawerOpen}/>
+        {backdrop}
       </div>
     </header>
-          <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
-          <SideDrawer show={this.state.sideDrawerOpen}/>
-          {backdrop}
+
      <div className="mainShape">
       <div>
      <h3 className="mainShapeTitle"> In the back is either going to be a. a series of videos or slide show carosal</h3>
