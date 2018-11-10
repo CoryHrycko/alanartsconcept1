@@ -43,22 +43,35 @@ $Csucess:hsl(104, 73%, 29%);
 .App {
   text-align: center;
 }
+.v-header{
+  position: flex;
+  margin: auto;
+  margin-top: 45px;
+  right: 0;
+  left: 0;
+  width: 100px;
+  width: 1000px;
+  background-color: $snow4;
+  border-radius: 3px;
+  height: 100vh;
+  max-width: 1200px;
+}
 .mainShape{
-  position: absolute;
+  position: flex;
   margin: auto;
   right: 0;
   left: 0;
   width: 100px;
   width: 1000px;
-  background-color: #ccc;
+  background-color: $snow4;
   border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
 
 }
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 75vmin;
+
 }
 
 .App-header {
@@ -107,8 +120,9 @@ $Csucess:hsl(104, 73%, 29%);
 .content {
   position: fixed;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  opacity: .5;
+  background: $black;
+  color: $snow4;
   width: 100%;
   padding: 20px;
 }
@@ -119,13 +133,13 @@ $Csucess:hsl(104, 73%, 29%);
   font-size: 18px;
   padding: 10px;
   border: none;
-  background: #000;
-  color: #fff;
+  background: $black;
+  color: $snow4;
   cursor: pointer;
 }
 
 #myBtn:hover {
-  background: #ddd;
+  background: $snow4;
   color: black;
 }
 //------------------trying to import the 
@@ -159,7 +173,8 @@ $Csucess:hsl(104, 73%, 29%);
 .sideDrawer {
   height:100%;
   background: $snow4;
-  box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+  opacity: .5;
+  box-shadow: 2px 0px 10px $black;
   position: fixed; 
   top:0;
   left: 0;
@@ -276,7 +291,8 @@ $Csucess:hsl(104, 73%, 29%);
   top:0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  opacity: .3;
+  background: $black;
   height: 3em;
   z-index: 150;
 }
@@ -360,7 +376,8 @@ $Csucess:hsl(104, 73%, 29%);
   height:100%;
   top:0;
   left:0;
-  background:rgba(0, 0, 0, 0.3);
+  background:$black;
+  opacity: .3;
   z-index: 100;
 }
 .icon {
@@ -378,7 +395,8 @@ $Csucess:hsl(104, 73%, 29%);
   height:100%;
   top:0;
   left:0;
-  background:rgba(0, 0, 0, 0.3);
+  background:$black;
+  opacity: .3;
   z-index: 100;
 }
 // -------------------------------------drawer toggle button
@@ -408,7 +426,8 @@ $Csucess:hsl(104, 73%, 29%);
 .sideDrawer {
   height:100%;
   background: white;
-  box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+  box-shadow: 2px 0px 10px $black;
+  opacity: .5;
   position: fixed;
   top:0;
   left: 0;
@@ -433,12 +452,12 @@ $Csucess:hsl(104, 73%, 29%);
 
 
 .sideDrawer a{
-  columns: #552211;
+  columns: $snow4;
   text-decoration: none;
 }
 .sideDrawer a:hover,
 .sideDrawer a:active{
-  color: #fa923f
+  color: $snow4;
 }
 @media (min-width: 769px){
   .sideDrawer {
@@ -451,7 +470,7 @@ $Csucess:hsl(104, 73%, 29%);
   top:0;
   left: 0;
   width: 100%;
-  background: #521751;
+  background: $snow4;
   height: 3em;
   z-index: 150;
 }
@@ -489,7 +508,7 @@ $Csucess:hsl(104, 73%, 29%);
 
 .toolBarNavItems a:hover,
 .toolBarNavItems a:active {
-  color: #fa923f;
+  color: $snow4;
 }
 
 @media (max-width: 768px){
@@ -512,7 +531,7 @@ $Csucess:hsl(104, 73%, 29%);
        text-align: center;
       }
       .toolBar{
-          height: 2em
+          height: 2em;
       }
 }
 @media(min-width: 769px) {
@@ -528,51 +547,52 @@ $Csucess:hsl(104, 73%, 29%);
   .sideDrawer {
       display: none;
   }
-  @media (max-width: 4000px){
-    .toolBarNavItems{
-        display: none;
+    @media (max-width: 4000px){
+      .toolBarNavItems{
+          display: none;
+      }
+  }
+  @media (max-width: 530px){
+      @media(min-width:340px){
+          .toolBarLogo a{
+          font-size: 4vw;
+          word-spacing:-.4vw ;
+          text-align: center;
+          }
+      }
+  }
+  @media (max-width: 339px){
+          .toolBarLogo a{
+          font-size: 4vw;
+          text-align: center;
+          }
+          .toolBar{
+              height: 2em;
+          }
+  }
+  @media(min-width: 4000px) {
+      .toolBarToggle{
+          display:none;
+      }
+      .toolBarLogo{
+          margin-left:0;
+      }
+  };
+  @media (max-width: 339px){
+    .toolBarLogo a{
+    font-size: 4vw;
+    text-align: center;
     }
-}
-@media (max-width: 530px){
-    @media(min-width:340px){
-        .toolBarLogo a{
-         font-size: 4vw;
-         word-spacing:-.4vw ;
-         text-align: center;
-        }
+    .toolBar{
+        height: 2em;
     }
-}
-@media (max-width: 339px){
-        .toolBarLogo a{
-         font-size: 4vw;
-         text-align: center;
-        }
-        .toolBar{
-            height: 2em;
-        }
-}
-@media(min-width: 4000px) {
+  }
+  @media(min-width: 4000px) {
     .toolBarToggle{
         display:none;
     }
     .toolBarLogo{
         margin-left:0;
     }
-};
-@media (max-width: 339px){
-  .toolBarLogo a{
-   font-size: 4vw;
-   text-align: center;
-  }
-  .toolBar{
-      height: 2em;
-  }
-}
-@media(min-width: 4000px) {
-  .toolBarToggle{
-      display:none;
-  }
-  .toolBarLogo{
-      margin-left:0;
   }
 }

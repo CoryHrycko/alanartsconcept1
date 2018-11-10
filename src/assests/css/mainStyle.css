@@ -18,23 +18,35 @@ code {
   text-align: center;
 }
 
+.v-header {
+  position: flex;
+  margin: auto;
+  margin-top: 45px;
+  right: 0;
+  left: 0;
+  width: 100px;
+  width: 1000px;
+  background-color: #8b8989;
+  border-radius: 3px;
+  height: 100vh;
+  max-width: 1200px;
+}
+
 .mainShape {
-  position: absolute;
+  position: flex;
   margin: auto;
   right: 0;
   left: 0;
   width: 100px;
   width: 1000px;
-  background-color: #ccc;
+  background-color: #8b8989;
   border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
 }
 
 .App-logo {
-  -webkit-animation: App-logo-spin infinite 20s linear;
-          animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 75vmin;
 }
 
 .App-header {
@@ -90,8 +102,9 @@ code {
 .content {
   position: fixed;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  opacity: .5;
+  background: black;
+  color: #8b8989;
   width: 100%;
   padding: 20px;
 }
@@ -102,13 +115,13 @@ code {
   font-size: 18px;
   padding: 10px;
   border: none;
-  background: #000;
-  color: #fff;
+  background: black;
+  color: #8b8989;
   cursor: pointer;
 }
 
 #myBtn:hover {
-  background: #ddd;
+  background: #8b8989;
   color: black;
 }
 
@@ -146,8 +159,9 @@ code {
 .sideDrawer {
   height: 100%;
   background: #8b8989;
-  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  opacity: .5;
+  -webkit-box-shadow: 2px 0px 10px black;
+          box-shadow: 2px 0px 10px black;
   position: fixed;
   top: 0;
   left: 0;
@@ -302,7 +316,8 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  opacity: .3;
+  background: black;
   height: 3em;
   z-index: 150;
 }
@@ -400,7 +415,8 @@ code {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: black;
+  opacity: .3;
   z-index: 100;
 }
 
@@ -422,7 +438,8 @@ code {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: black;
+  opacity: .3;
   z-index: 100;
 }
 
@@ -459,8 +476,9 @@ code {
 .sideDrawer {
   height: 100%;
   background: white;
-  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 0px 10px black;
+          box-shadow: 2px 0px 10px black;
+  opacity: .5;
   position: fixed;
   top: 0;
   left: 0;
@@ -497,14 +515,14 @@ code {
 }
 
 .sideDrawer a {
-  -webkit-columns: #552211;
-          columns: #552211;
+  -webkit-columns: #8b8989;
+          columns: #8b8989;
   text-decoration: none;
 }
 
 .sideDrawer a:hover,
 .sideDrawer a:active {
-  color: #fa923f;
+  color: #8b8989;
 }
 
 @media (min-width: 769px) {
@@ -518,7 +536,7 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  background: #521751;
+  background: #8b8989;
   height: 3em;
   z-index: 150;
 }
@@ -570,7 +588,7 @@ code {
 
 .toolBarNavItems a:hover,
 .toolBarNavItems a:active {
-  color: #fa923f;
+  color: #8b8989;
 }
 
 @media (max-width: 768px) {
@@ -598,6 +616,64 @@ code {
 }
 
 @media (min-width: 769px) {
+  .toolBarToggle {
+    display: none;
+  }
+  .toolBarLogo {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 4000px) {
+  .sideDrawer {
+    display: none;
+  }
+}
+
+@media (min-width: 4000px) and (max-width: 4000px) {
+  .toolBarNavItems {
+    display: none;
+  }
+}
+
+@media (min-width: 4000px) and (max-width: 530px) and (min-width: 340px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    word-spacing: -.4vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 4000px) and (max-width: 339px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .toolBar {
+    height: 2em;
+  }
+}
+
+@media (min-width: 4000px) and (min-width: 4000px) {
+  .toolBarToggle {
+    display: none;
+  }
+  .toolBarLogo {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 4000px) and (max-width: 339px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .toolBar {
+    height: 2em;
+  }
+}
+
+@media (min-width: 4000px) and (min-width: 4000px) {
   .toolBarToggle {
     display: none;
   }
