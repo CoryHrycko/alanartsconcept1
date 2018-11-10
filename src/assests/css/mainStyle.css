@@ -109,4 +109,498 @@ code {
   background: #ddd;
   color: black;
 }
+
+/*---------------------------------------nav/cart/sliderside*/
+.toggleButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.toggleButton :focus {
+  outline: none;
+}
+
+.toggleButtonLine {
+  width: 25px;
+  height: 2px;
+  background: #342718;
+}
+
+.sideDrawer {
+  height: 100%;
+  background: #8b8989;
+  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  z-index: 200;
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.sideDrawer .itemsShelf {
+  display: none;
+}
+
+.sideDrawer.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.sideDrawer.open .itemsShelf {
+  display: none;
+}
+
+.sideDrawer.open .Cart {
+  height: 100%;
+}
+
+.sideDrawer.open .Cart .mainCart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 30px 95px 30px 40px;
+      grid-template-columns: 40px 30px 95px 30px 40px;
+  -ms-grid-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
+      grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
+  grid-auto-rows: 40px;
+  background: #8b8989;
+  border-bottom: solid black 2px;
+  list-style: none;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.sideDrawer.open .Cart .mainCart .titleCart1 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sideDrawer.open .Cart .mainCart .titleCart2 {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  grid-column: 1/-1;
+  border-bottom: black solid 1px;
+}
+
+.sideDrawer.open .Cart .mainCart hr {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+.sideDrawer.open .Cart .mainCart ul {
+  top: 20%;
+  grid-column: 2/-1;
+  grid-row: 3/-2;
+  display: relative;
+}
+
+.sideDrawer.open .Cart .mainCart ul li {
+  grid-column: 2/-1;
+  grid-row: auto;
+}
+
+.sideDrawer.open .Cart .mainCart .purchase {
+  display: relative;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  grid-row: -1;
+}
+
+.sideDrawer.open .Cart .mainCart .purchase button {
+  background-color: #8b8989;
+  border: black solid 1px;
+  color: #8b8989;
+  padding: 8px 8px;
+  text-align: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+}
+
+.sideDrawer.open .Cart .mainCart .purchase button:hover {
+  background-color: #318014;
+  color: #8b8989;
+}
+
+.sideDrawer ul {
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #8b8989;
+}
+
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+.sideDrawer a {
+  -webkit-columns: #8b8989;
+          columns: #8b8989;
+  text-decoration: none;
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+  color: orange;
+}
+
+@media (min-width: 4000px) {
+  .sideDrawer {
+    display: none;
+  }
+}
+
+.toolBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  height: 3em;
+  z-index: 150;
+}
+
+.toolBarNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.toolBarLogo {
+  position: absolute;
+  text-align: center;
+  right: 3%;
+  word-spacing: -.2rem;
+}
+
+.toolBarLogo a {
+  color: #8b8989;
+  text-decoration: none;
+  font-size: 2rem;
+  word-spacing: -.2rem;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.toolBarNavItems ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toolBarNavItems li {
+  padding: 0 0.5rem;
+}
+
+.toolBarNavItems a {
+  color: #8b8989;
+  text-decoration: none;
+}
+
+.toolBarNavItems a:hover,
+.toolBarNavItems a:active {
+  color: #ff9914;
+}
+
+@media (max-width: 4000px) {
+  .toolBarNavItems {
+    display: none;
+  }
+}
+
+@media (max-width: 530px) and (min-width: 340px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    word-spacing: -.4vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 339px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .toolBar {
+    height: 2em;
+  }
+}
+
+@media (min-width: 4000px) {
+  .toolBarToggle {
+    display: none;
+  }
+  .toolBarLogo {
+    margin-left: 0;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.icon {
+  height: 6vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon svg {
+  height: 4vh;
+  color: #8b8989;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.toggleButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.toggleButton :focus {
+  outline: none;
+}
+
+.toggleButtonLine {
+  width: 25px;
+  height: 2px;
+  background: white;
+}
+
+.sideDrawer {
+  height: 100%;
+  background: white;
+  -webkit-box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  z-index: 200;
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.sideDrawer.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.sideDrawer ul {
+  height: 100%;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+.sideDrawer a {
+  -webkit-columns: #552211;
+          columns: #552211;
+  text-decoration: none;
+}
+
+.sideDrawer a:hover,
+.sideDrawer a:active {
+  color: #fa923f;
+}
+
+@media (min-width: 769px) {
+  .sideDrawer {
+    display: none;
+  }
+}
+
+.toolBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #521751;
+  height: 3em;
+  z-index: 150;
+}
+
+.toolBarNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+}
+
+.toolBarLogo {
+  margin-left: 1rem;
+}
+
+.toolBarLogo a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.spacer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.toolBarNavItems ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toolBarNavItems li {
+  padding: 0 0.5rem;
+}
+
+.toolBarNavItems a {
+  color: white;
+  text-decoration: none;
+}
+
+.toolBarNavItems a:hover,
+.toolBarNavItems a:active {
+  color: #fa923f;
+}
+
+@media (max-width: 768px) {
+  .toolBarNavItems {
+    display: none;
+  }
+}
+
+@media (max-width: 530px) and (min-width: 340px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    word-spacing: 1vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 339px) {
+  .toolBarLogo a {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .toolBar {
+    height: 2em;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolBarToggle {
+    display: none;
+  }
+  .toolBarLogo {
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=mainStyle.css.map */

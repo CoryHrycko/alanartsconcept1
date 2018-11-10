@@ -259,7 +259,7 @@ $Csucess:hsl(104, 73%, 29%);
 }
 .sideDrawer a:hover,
 .sideDrawer a:active{
-  color: $Tcolor;
+  color: orange;
 }
 @media (min-width: 4000px){
   .sideDrawer {
@@ -439,5 +439,83 @@ $Csucess:hsl(104, 73%, 29%);
 @media (min-width: 769px){
   .sideDrawer {
       display: none;
+  }
+}
+// ________________ toolbar
+.toolBar {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: #521751;
+  height: 3em;
+  z-index: 150;
+}
+.toolBarNav{
+  display: flex;
+  height:100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+.toolBarLogo{
+  margin-left: 1rem;
+}
+.toolBarLogo a{
+  color:white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.spacer {
+  flex:1;
+}
+
+.toolBarNavItems ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  display: flex;
+}
+.toolBarNavItems li{
+  padding: 0 0.5rem;
+}
+.toolBarNavItems a{
+  color:white;
+  text-decoration: none;
+}
+
+.toolBarNavItems a:hover,
+.toolBarNavItems a:active {
+  color: #fa923f;
+}
+
+@media (max-width: 768px){
+  .toolBarNavItems{
+      display: none;
+  }
+}
+@media (max-width: 530px){
+  @media(min-width:340px){
+      .toolBarLogo a{
+       font-size: 4vw;
+       word-spacing:1vw ;
+       text-align: center;
+      }
+  }
+}
+@media (max-width: 339px){
+      .toolBarLogo a{
+       font-size: 4vw;
+       text-align: center;
+      }
+      .toolBar{
+          height: 2em
+      }
+}
+@media(min-width: 769px) {
+  .toolBarToggle{
+      display:none;
+  }
+  .toolBarLogo{
+      margin-left:0;
   }
 }
