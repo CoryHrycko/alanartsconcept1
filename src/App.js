@@ -59,11 +59,11 @@ backdropClickHandler=()=>{
           {backdrop}
 
     </header>
-     <container className="mainShape">
+     <div className="mainShape">
    
      <h3 className="mainShapeTitle"> In the back is either going to be a. a series of videos or slide show</h3>
 
-     </container>
+     </div>
    </div>
    
     
