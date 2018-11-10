@@ -523,3 +523,56 @@ $Csucess:hsl(104, 73%, 29%);
       margin-left:0;
   }
 }
+// ---------------media query section
+@media (min-width: 4000px){
+  .sideDrawer {
+      display: none;
+  }
+  @media (max-width: 4000px){
+    .toolBarNavItems{
+        display: none;
+    }
+}
+@media (max-width: 530px){
+    @media(min-width:340px){
+        .toolBarLogo a{
+         font-size: 4vw;
+         word-spacing:-.4vw ;
+         text-align: center;
+        }
+    }
+}
+@media (max-width: 339px){
+        .toolBarLogo a{
+         font-size: 4vw;
+         text-align: center;
+        }
+        .toolBar{
+            height: 2em;
+        }
+}
+@media(min-width: 4000px) {
+    .toolBarToggle{
+        display:none;
+    }
+    .toolBarLogo{
+        margin-left:0;
+    }
+};
+@media (max-width: 339px){
+  .toolBarLogo a{
+   font-size: 4vw;
+   text-align: center;
+  }
+  .toolBar{
+      height: 2em;
+  }
+}
+@media(min-width: 4000px) {
+  .toolBarToggle{
+      display:none;
+  }
+  .toolBarLogo{
+      margin-left:0;
+  }
+}
