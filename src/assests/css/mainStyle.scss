@@ -89,3 +89,355 @@ $Csucess:hsl(104, 73%, 29%);
   }
 }
 */
+//---------------------------------------fucking video
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+//------------------trying to import the 
+
+/*---------------------------------------nav/cart/sliderside*/
+
+.toggleButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggleButton :focus{
+  outline: none;
+}
+
+.toggleButtonLine {
+  width: 25px;
+  height: 2px;
+  background: $cafeamericano;
+}
+//---------------------------side drawer main
+
+.sideDrawer {
+  height:100%;
+  background: $snow4;
+  box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+  position: fixed; 
+  top:0;
+  left: 0;
+  width:240px;
+  z-index: 200;
+  transform: translatex(-100%);
+  transition: 0.3s ease-out;
+  .itemsShelf{
+      display:none;
+  }
+}
+.sideDrawer.open {
+  transform: translateX(0);
+  .itemsShelf{
+      display:none;
+  }
+  .Cart{
+      height:100%;
+
+      .mainCart {
+          display: grid;
+          grid-template-columns: 40px 30px 95px 30px 40px;
+          grid-template-rows: 40px 40px 40px 40px 40px 40px 40px 40px;
+          grid-auto-rows: 40px;
+          background: $snow4;
+          border-bottom: solid black 2px;
+          list-style: none;
+          text-decoration: none;
+          list-style-type:none;
+          justify-content: center;
+          height:100%;
+
+          .titleCart1{
+              grid-column: 1;
+              grid-row: 1;
+              justify-content: center;
+          }
+          .titleCart2{
+              grid-row:2;
+              grid-column: 1/-1;
+              border-bottom: black solid 1px;
+
+          }
+          hr{
+              grid-row: 2;
+              grid-column: 1/-1;
+          }
+          ul{
+              top:20%;
+              grid-column: 2/-1;
+              grid-row:3/-2;
+              display: relative;
+          li{
+              grid-column: 2/-1;
+              grid-row: auto;
+          }
+          }
+          .purchase{
+              display:relative;
+              grid-column: 2;
+              grid-row: -1;
+              button{
+                  background-color: $snow4;
+                  border: black solid 1px;
+                  color: $snow4;
+                  padding: 8px 8px;
+                  text-align: center;
+                  justify-content: start;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                  margin: 4px 2px;
+                  -webkit-transition-duration: 0.4s; /* Safari */
+                  transition-duration: 0.4s;
+              }
+              button:hover {
+                  background-color: $Csucess;
+                  color: $snow4;
+              }
+          }
+          }
+      }
+  }
+.sideDrawer ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $snow4;
+
+}
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+
+.sideDrawer a{
+  columns: $snow4;
+  text-decoration: none;
+}
+.sideDrawer a:hover,
+.sideDrawer a:active{
+  color: $Tcolor;
+}
+@media (min-width: 4000px){
+  .sideDrawer {
+      display: none;
+  }
+}
+//--------------------------------------more nav bar
+.toolBar {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  height: 3em;
+  z-index: 150;
+}
+.toolBarNav{
+  display: flex;
+  height:100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+.toolBarLogo{
+  position: absolute;
+  text-align: center;
+  right:3%;
+  word-spacing: -.2rem;
+
+}
+.toolBarLogo a{
+  color:$snow4;
+  text-decoration: none;
+  font-size: 2rem; 
+  word-spacing: -.2rem;
+}
+.spacer {
+  flex:1;
+}
+
+.toolBarNavItems ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+  display: flex;
+}
+.toolBarNavItems li{
+  padding: 0 0.5rem;
+}
+.toolBarNavItems a{
+  color:$snow4;
+  text-decoration: none;
+}
+
+.toolBarNavItems a:hover,
+.toolBarNavItems a:active {
+  color: $Cdanger;
+}
+//----------------------------------adapting previous code to fit.
+@media (max-width: 4000px){
+  .toolBarNavItems{
+      display: none;
+  }
+}
+@media (max-width: 530px){
+  @media(min-width:340px){
+      .toolBarLogo a{
+       font-size: 4vw;
+       word-spacing:-.4vw ;
+       text-align: center;
+      }
+  }
+}
+@media (max-width: 339px){
+      .toolBarLogo a{
+       font-size: 4vw;
+       text-align: center;
+      }
+      .toolBar{
+          height: 2em
+      }
+}
+@media(min-width: 4000px) {
+  .toolBarToggle{
+      display:none;
+  }
+  .toolBarLogo{
+      margin-left:0;
+  }
+}
+//-----------------------------------------blackness once things are open.
+.backdrop{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.icon {
+  height:6vh;
+  display:flex;
+  svg{
+      height:4vh;
+      color: $snow4;
+  }
+};
+// ---------------------------------------blackdrop lol
+.backdrop{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+// -------------------------------------drawer toggle button
+.toggleButton{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggleButton :focus{
+  outline: none;
+}
+
+.toggleButtonLine {
+  width: 25px;
+  height: 2px;
+  background: white;
+}
+//---------------------------- Side Drawer
+.sideDrawer {
+  height:100%;
+  background: white;
+  box-shadow: 2px 0px 10px rgba(0,0,0,0.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  width:200px;
+  z-index: 200;
+  transform: translatex(-100%);
+  transition: 0.3s ease-out
+}
+.sideDrawer.open {
+  transform: translateX(0)
+}
+.sideDrawer ul{
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sideDrawer li {
+  margin: 0.5rem 0;
+}
+
+
+.sideDrawer a{
+  columns: #552211;
+  text-decoration: none;
+}
+.sideDrawer a:hover,
+.sideDrawer a:active{
+  color: #fa923f
+}
+@media (min-width: 769px){
+  .sideDrawer {
+      display: none;
+  }
+}
