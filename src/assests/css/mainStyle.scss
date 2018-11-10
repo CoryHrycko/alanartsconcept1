@@ -43,10 +43,12 @@ $Csucess:hsl(104, 73%, 29%);
 .App {
   text-align: center;
 }
+.heropanel{
+  background: orange;
+}
 .v-header{
   position: flex;
   margin: auto;
-  margin-top: 45px;
   right: 0;
   left: 0;
   width: 100px;
@@ -55,6 +57,9 @@ $Csucess:hsl(104, 73%, 29%);
   border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
+}
+.mainBg{
+  background: orange;
 }
 .mainShape{
   position: flex;
@@ -72,6 +77,15 @@ $Csucess:hsl(104, 73%, 29%);
 .App-logo {
   height: 75vmin;
 
+}
+.appLogoContainer{
+  display: inline-block;
+  margin-top: 45px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width:600px;
 }
 
 .App-header {
