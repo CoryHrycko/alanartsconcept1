@@ -62,7 +62,9 @@ $Csucess:hsl(104, 73%, 29%);
   background: orange;
 }
 .mainShape{
+  display:grid;
   position: flex;
+  grid-gap: 1rem;
   margin: auto;
   right: 0;
   left: 0;
@@ -99,9 +101,11 @@ $Csucess:hsl(104, 73%, 29%);
   color: $P1color;
 }
 .App-title{
+ display: inline-block;
+ margin:--p;
+ width: --p;
  background: $Calert;
- padding: var(--p);
- 
+ padding: (--p)*2;
 }
 .App-link {
   color: $ivoryblack;

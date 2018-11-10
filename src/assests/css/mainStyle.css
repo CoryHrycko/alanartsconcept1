@@ -40,7 +40,10 @@ code {
 }
 
 .mainShape {
+  display: -ms-grid;
+  display: grid;
   position: flex;
+  grid-gap: 1rem;
   margin: auto;
   right: 0;
   left: 0;
@@ -92,8 +95,11 @@ code {
 }
 
 .App-title {
+  display: inline-block;
+  margin: --p;
+  width: 500px;
   background: #e32636;
-  padding: var(--p);
+  padding: --p;
 }
 
 .App-link {

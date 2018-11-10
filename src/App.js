@@ -5,6 +5,8 @@ import { simpleAction } from './actions/simpleAction'
 import Toolbar from './components/Toolbar/Toolbar.jsx';
 import SideDrawer from './components/SideDrawer/SideDrawer.jsx'
 import Backdrop from './components/Backdrop/Backdrop.jsx';
+import Footer from './containers/footer/Footer.js'
+
 
 const mapStateToProps = state => ({
   ...state
@@ -47,7 +49,9 @@ backdropClickHandler=()=>{
         <div className="appLogoContainer">
           <img src={Capture} className="App-logo" alt="logo" />
           </div>
+        <div className="AppTitle">
           <h1 className="App-title">Allen Arts Music</h1>
+        </div>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler}/>
         <SideDrawer show={this.state.sideDrawerOpen}/>
         {backdrop}
@@ -71,7 +75,7 @@ backdropClickHandler=()=>{
    </div>
    </div>
    </div>
-   <footer>some text displayinh date</footer>>
+   <Footer />
    </div>
     
   );
