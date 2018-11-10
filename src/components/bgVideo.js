@@ -1,25 +1,13 @@
-{/*'use strict';
+import React, {Component, PropTypes} from 'react';
 
-import React, {Component} from 'react';
+export default class Video extends Component {
+    static propTypes = {};
 
-class Video extends Component {
-    constructor (props) {
-        super(props);
-
-        this.state = {
-            videoURL: 'ThePiano.mp4'
-        }
-    };
-
-    render () {
-        return (
-            <video id="background-video" loop autoPlay>
-                <source src={this.state.videoURL} type="video/mp4" />
-                <source src={this.state.videoURL} type="video/ogg" />
-                Your browser does not support the video tag.
-            </video>
+    render(){
+        return(
+            <div>
+                
+            </div>
         )
     }
 };
-
-export default Video;*/}
