@@ -91,12 +91,17 @@ $Csucess:hsl(104, 73%, 29%);
 */
 //---------------------------------------fucking video
 /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  right: 0;
-  bottom: 0;
-  width:100%;
-  margin-bottom:150%;
-}
+#background-video{
+
+  height: 100%;
+  width: 100%;
+  float: left;
+  top: 0;
+  padding: none;
+  position: fixed; /* optional depending on what you want to do in your app */
+  
+  
+  }
 
 /* Add some content at the bottom of the video/page */
 .content {

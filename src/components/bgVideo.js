@@ -1,3 +1,5 @@
+{/*'use strict';
+
 import React, {Component} from 'react';
 
 class Video extends Component {
@@ -5,13 +7,13 @@ class Video extends Component {
         super(props);
 
         this.state = {
-            videoURL: 'https://www.youtube.com/watch?v=Xy3GlrddZFI&t=171s'
+            videoURL: 'ThePiano.mp4'
         }
-    }
+    };
 
     render () {
         return (
-            <video id="background-video" loop autoPlay muted>
+            <video id="background-video" loop autoPlay>
                 <source src={this.state.videoURL} type="video/mp4" />
                 <source src={this.state.videoURL} type="video/ogg" />
                 Your browser does not support the video tag.
@@ -20,4 +22,4 @@ class Video extends Component {
     }
 };
 
-export default Video;
+export default Video;*/}

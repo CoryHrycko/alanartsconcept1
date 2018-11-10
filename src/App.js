@@ -5,10 +5,7 @@ import { simpleAction } from './actions/simpleAction'
 import Toolbar from './components/Toolbar/Toolbar.jsx';
 import SideDrawer from './components/SideDrawer/SideDrawer.jsx'
 import Backdrop from './components/Backdrop/Backdrop.jsx';
-
-
-
-//import Video from './components/bgVideo.js'
+import Video from './components/bgVideo'
 
 const mapStateToProps = state => ({
   ...state
@@ -47,9 +44,10 @@ backdropClickHandler=()=>{
     return (
     <div className="App">
     <header className="heropanel">
-    <video autoPlay muted loop id="myVideo">
-      <source src="ThePiano.mp4" type="video/mp4"></source>
-    </video>
+    {/* <video autoPlay muted loop id="myVideo"> 
+      <source src="https://youtu.be/zmPzbZVUp3g" type="video/mp4"></source>
+    </video>*/}
+      <Video />
       <div className="v-header container">
           <img src={Capture} className="App-logo" alt="logo" />
           <h1 className="App-title">Allen Arts Music</h1>
