@@ -53,7 +53,7 @@ $Csucess:hsl(104, 73%, 29%);
   left: 0;
   width: 100px;
   width: 1000px;
-  background-color: $snow4;
+  background: $snow4 url('https://unsplash.com/photos/RQ0_Fp2Hr2M');
   border-radius: 3px;
   height: 100vh;
   max-width: 1200px;
@@ -62,9 +62,12 @@ $Csucess:hsl(104, 73%, 29%);
   background: orange;
 }
 .mainShape{
-  display:grid;
+  display: grid;
   position: flex;
   grid-gap: 1rem;
+  grid-template-columns: 30px 1fr 480px 1fr 30px;
+  grid-auto-rows: min-content max-content auto;
+  align-items: baseline;
   margin: auto;
   right: 0;
   left: 0;
@@ -76,12 +79,48 @@ $Csucess:hsl(104, 73%, 29%);
   max-width: 1200px;
 
 }
-.App-logo {
-  height: 75vmin;
+// ---------------------------grid items
 
+.mainShapeTitle{
+  grid-column: 2/-2;
+  background:$snow2;
+  align-self: baseline;
+}
+.mainShapeTitle2{
+  background:$cafeamericano;
+  grid-column: 2;
+  grid-row:2/auto;
+  justify-content: center;
+}
+.mainShapeTitle3{
+  background:$snow2;
+  grid-row:2/auto;
+  grid-column: 3;
+}
+.mainShapeTitle4{
+  background:$cafeamericano;
+  grid-row:2;
+  grid-column: 4;
+}
+
+
+
+// ---------------------------end grid items
+.bgPic{
+  z-index: -300;
+  display: absolute;
+  size:cover;
+}
+.App-logo {
+  display: relative;
+  max-width: 500px;
+  height: 75vmin;
+  padding: 1.3rem;
 }
 .appLogoContainer{
   display: inline-block;
+  background: red;
+  padding: --p;
   margin-top: 45px;
   text-align: center;
   align-items: center;
@@ -102,10 +141,10 @@ $Csucess:hsl(104, 73%, 29%);
 }
 .App-title{
  display: inline-block;
- margin:--p;
- width: --p;
  background: $Calert;
- padding: (--p)*2;
+}
+.AppTitle{
+  margin-top: -1rem;
 }
 .App-link {
   color: $ivoryblack;
@@ -528,7 +567,12 @@ $Csucess:hsl(104, 73%, 29%);
 .toolBarNavItems a:active {
   color: $snow4;
 }
-
+// -----------------------------------footer
+.footer{
+  display: flex;
+  font-size: .7rem;
+}
+// ------------------------------------media queries
 @media (max-width: 768px){
   .toolBarNavItems{
       display: none;

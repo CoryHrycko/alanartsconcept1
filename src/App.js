@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Capture from './assests/Capture.JPG';
+import Denise from './assests/deniseJans.jpg'
 import { simpleAction } from './actions/simpleAction'
 import Toolbar from './components/Toolbar/Toolbar.jsx';
 import SideDrawer from './components/SideDrawer/SideDrawer.jsx'
@@ -59,19 +60,17 @@ backdropClickHandler=()=>{
     </header>
     <div className="mainBg">
      <div className="mainShape">
-      <div>
-     <h3 className="mainShapeTitle"> In the back is either going to be a. a series of videos or slide show carosal</h3>
-    
-
-     </div>
-     <div>
-     <h3 className="mainShapeTitle">> some sort of Events</h3>
+   <div className="mainShapeTitle">
+     <h3> In the back is either going to be a. a series of videos or slide show carosal</h3>
    </div>
-   <div>
-     <h3 className="mainShapeTitle">> a claender of events</h3>
+   <div className="mainShapeTitle2">
+     <h3>> some sort of Events</h3>
    </div>
-   <div>
-     <h3 className="mainShapeTitle">> Contact Form</h3>
+   <div className="mainShapeTitle3">
+     <h3>> a claender of events,<br></br>,<br></br>,<br></br>,<br></br>,<br></br>,<br></br></h3>
+   </div>
+   <div className="mainShapeTitle4">
+     <h3>> Contact Form</h3>
    </div>
    </div>
    </div>

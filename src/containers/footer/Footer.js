@@ -1,7 +1,11 @@
 import React from 'react';
+import Date from '../../assests/Date'
+
 
 const footer2 = props => (
-    <footer>some text displayinh date</footer>
+<div className="footer">Copyright © &nbsp;<Date /> &nbsp;Allen Arts Music Group. All rights reserved.
+        
+    </div>
 );
 
 export default footer2;
